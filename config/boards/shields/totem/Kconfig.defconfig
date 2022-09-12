@@ -10,7 +10,7 @@ endif # LEFT
 
 
 
-if SHIELD_TOTEM
+if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT
 
     config ZMK_SPLIT
         default y

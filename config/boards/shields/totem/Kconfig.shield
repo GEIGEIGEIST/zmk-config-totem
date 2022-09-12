@@ -1,10 +1,5 @@
-config SHIELD_TOTEM
-    bool
-
 config SHIELD_TOTEM_LEFT
     def_bool $(shields_list_contains,totem_left)
-    select SHIELD_TOTEM
 
 config SHIELD_TOTEM_RIGHT
     def_bool $(shields_list_contains,totem_right)
-    select SHIELD_TOTEM

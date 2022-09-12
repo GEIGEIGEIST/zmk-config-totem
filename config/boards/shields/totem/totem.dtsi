@@ -12,7 +12,7 @@
 		zmk,matrix_transform = &default_transform;
 	};
 
-	default_transform: keymap_transform_0 {
+	default_transform: keymap_transform {
 		compatible = "zmk,matrix-transform";
 		columns = <10>;
 		rows = <4>;
@@ -25,7 +25,7 @@
 	};
 
 
-	kscan0: kscan_0 {
+	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
 		label = "KSCAN";
 		diode-direction = "col2row";
