@@ -1,0 +1,11 @@
+file_format: "1"
+id: totem
+name: Totem
+type: shield
+url: https://github.com/GEIGEIGEIST/TOTEM
+requires: [seeed_xiao]
+features:
+  - keys
+siblings:
+  - totem_left
+  - totem_right

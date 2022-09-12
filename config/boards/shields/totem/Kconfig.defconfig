@@ -1,0 +1,30 @@
+if SHIELD_TOTEM_LEFT
+
+    config ZMK_KEYBOARD_NAME
+        default "TOTEM"
+
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
+
+endif # LEFT
+
+
+
+if SHIELD_TOTEM_LEFT || SHIELD_TOTEM_RIGHT
+
+    config ZMK_SPLIT
+        default y
+
+endif # LEFT RIGHT
+
+
+
+if ZMK_BACKLIGHT
+
+    config PWM
+        default y
+
+    config LED_PWM
+        default y
+
+endif # ZMK_BACKLIGHT
