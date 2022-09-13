@@ -1,3 +1,6 @@
+# Copyright (c) 2022 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
 config SHIELD_TOTEM
     bool
 
@@ -7,4 +10,4 @@ config SHIELD_TOTEM_LEFT
 
 config SHIELD_TOTEM_RIGHT
     def_bool $(shields_list_contains,totem_right)
-    select SHIELD_CLOG_V2
+    select SHIELD_TOTEM

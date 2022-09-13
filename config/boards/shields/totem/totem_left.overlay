@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 GEIST
+ * Copyright (c) 2022 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
  */
@@ -7,7 +7,7 @@
 #include "totem.dtsi"
 
 &kscan0 {
-	col-gpios
+    col-gpios
         = <&xiao_d 5  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         , <&xiao_d 6  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         , <&xiao_d 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
