@@ -29,9 +29,9 @@ label= "BASE"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1      &kp N4      &kp N7      &kp A       &kp D           &kp J       &kp L       &kp U       &kp Y       &kp SEMI
-                &kp N2      &kp N5      &kp N8      &kp B       &kp E           &kp H       &mt RSHFT N &mt RCTRL E &mt RALT I  &mt RGUI O
+                &kp N2      &kp N5      &kp N8      &kp B       &kp E           &kp N2      &kp N5      &kp N8      &kp B       &kp E
     &kp N0      &kp N3      &kp N6      &kp N9      &kp C       &kp F           &kp K       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp FSLH
-                                        &kp G       &kp H       &kp I           &lt SYM RET &kp BSPC    &kp BSPC
+                                        &kp G       &kp H       &kp I           &kp RET     &kp BSPC    &kp BSPC
                         >;
                 };
         };
