@@ -3,5 +3,4 @@ include:
     shield: totem_left
   - board: seeeduino_xiao_ble
     shield: totem_right
- - board: seeeduino_xiao_ble
-   shield: settings_reset
+# there is no settingsreset (needed) for the XIAO
