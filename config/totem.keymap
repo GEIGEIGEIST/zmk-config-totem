@@ -100,7 +100,7 @@ label= "NAVI"                              ;
 
                 &kp EXCL    &kp AT      &kp SEMI    &kp COLON   &kp UNDER       &kp EQUAL   &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_PLUS
                 &kp LSHFT   &kp LEFT    &kp LBRC    &kp LPAR    &kp LBKT        &kp ASTRK   &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_MINUS
-    &trans      &kp DQT     &kp SQT     &kp RBRC    &kp RPAR    &kp RBKT        &kp KP_N0   &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp FSLH      
+    &trans      &kp DQT     &kp SQT     &kp RBRC    &kp RPAR    &kp RBKT        &kp KP_N0   &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp FSLH       &trans  
                                         &trans      &trans      &mo ADJ         &trans     &trans    &trans      
                         >;
                 };
