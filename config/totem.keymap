@@ -75,7 +75,7 @@ label= "BASE"                              ;
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp A       &kp S       &kp D       &kp F       &kp G           &kp H       &kp J       &kp K       &kp L       &kp SEMI
     &kp Q       &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &kp BSLH
-                                        &kp DEL   &lt NAV TAB   &kp SPACE       &lt RET SYM &kp LSHFT  &kp BSPC
+                                        &kp DEL   &lt NAV TAB   &kp SPACE       &lt SYM RET &kp LSHFT  &kp BSPC
                         >;
                 };
 
