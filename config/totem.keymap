@@ -102,7 +102,7 @@ label= "NUM"                              ;
                 &kp EXCL    &kp AT      &kp SEMI    &kp COLON   &kp UNDER       &kp EQUAL   &kp    N7   &kp    N8   &kp    N9   &kp    PLUS
                 &kp LSHFT   &kp LEFT    &kp LBRC    &kp LPAR    &kp LBKT        &kp ASTRK   &kp N4      &kp    N5   &kp    N6   &kp    MINUS
     &trans      &kp DQT     &kp SQT     &kp RBRC    &kp RPAR    &kp RBKT        &kp N0      &kp N1      &kp N2      &kp N3   &kp FSLH       &trans  
-                                        &trans      &trans      &mo ADJ         &trans     &trans    &trans      
+                                        &trans      &trans      &mo FUN         &trans     &trans    &trans      
                         >;
                 };
 
