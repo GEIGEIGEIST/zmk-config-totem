@@ -20,7 +20,7 @@
 #define NUM  1
 #define NAV  2
 #define SYM  3
-#define ADJ  4
+#define FUN  4
 
 &mt {
   quick-tap-ms = <100>;
@@ -128,7 +128,7 @@ label= "NAV"                               ;
                 &kp ESC    &kp LA(LEFT) &kp LC(F) &kp LA(RIGHT) &kp LCTRL        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LGUI       
                 &sk LALT   &sk LGUI    &sk LSHFT   &sk LCTRL   &sk RALT         &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp DEL 
     &kp ESC     &kp LC(Z)  &kp LC(X)   &kp LC(C)   &kp TAB     &kp LC(V)        &kp RET     &kp BSPC    &kp RCTRL   &kp LALT    &kp K_MENU   &kp LGUI         
-                                        &trans      &trans     &trans           &trans      &mo ADJ     &trans      
+                                        &trans      &trans     &trans           &trans      &mo FUN     &trans      
                         >;
                 };
 
@@ -161,25 +161,25 @@ label= "NAV"                               ;
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
 
-                adjust_layer {
+                functions_and_controls_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-label= "ADJ"                               ;
+label= "FUN"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃           ┃   ┃           ┃    F7     ┃    F8     ┃    F9     ┃    F12    ┃
+//             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃           ┃   ┃    F12    ┃    F7     ┃    F8     ┃    F9     ┃  PSCRN    ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃ BOOTLOAD  ┃ BT NEXT   ┃           ┃           ┃           ┃   ┃           ┃    F4     ┃    F5     ┃    F6     ┃    F11    ┃
+//             ┃ BOOTLOAD  ┃ BT NEXT   ┃     BT 0  ┃    BT 1   ┃   BT 2    ┃   ┃   F11     ┃    F4     ┃    F5     ┃    F6     ┃  crop     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃           ┃           ┃ BT PREV   ┃           ┃           ┃           ┃   ┃           ┃    F1     ┃    F2     ┃    F3     ┃    F10    ┃           ┃
+// ┃           ┃           ┃ BT PREV   ┃           ┃           ┃           ┃   ┃    F10    ┃    F1     ┃    F2     ┃    F3     ┃  mac crop ┃           ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &reset      &bt BT_CLR &out OUT_TOG &trans      &trans          &trans      &kp F7      &kp F8      &kp F9      &kp F12
-                &bootloader &bt BT_NXT  &trans      &trans      &trans          &trans      &kp F4      &kp F5      &kp F6      &kp F11  
-    &trans      &trans      &bt BT_PRV  &trans      &trans      &trans          &trans      &kp F1      &kp F2      &kp F3      &kp F10     &trans         
+                &reset      &bt BT_CLR &out OUT_TOG &trans      &trans          &kp F12     &kp F7      &kp F8      &kp F9      &kp PSCRN
+                &bootloader &bt BT_NXT  &BT_SEL 0   &BT_SEL 1   &BT_SEL 2       &kp F11     &kp F4      &kp F5      &kp F6      &kp LC(LS(PSCRN))  
+    &trans      &trans      &bt BT_PRV  &BT_SEL 3   &BT_SEL 4   &BT_SEL 5       &kp F10     &kp F1      &kp F2      &kp F3      &kp LG(LS(N4))      &trans         
                                         &trans      &trans      &trans          &trans      &trans      &trans      
                         >;
                 };
