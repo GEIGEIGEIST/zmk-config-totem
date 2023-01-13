@@ -124,9 +124,9 @@ label= "NAV"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp ESC    LA(LEFT)    LC(F)       LA(RIGHT)   &kp LCTRL        &kp PG_UP   &kp HOME    &kp UP   &kp END     &kp LGUI       
-                &sk LALT   &sk LGUI    &sk LSHFT   &sk LCTRL   &sk RALT         &kp PG_DOWN &kp LEFT    &kp DOWN    &kp RIGHT   &kp DEL 
-    &kp ESC     LC(Z)      LC(X)       LC(C)       TAB         LC(V)            &kp RET     &kp BSPC    &kp RCTRL   &kp LALT    &kp K_MENU   &trans         
+                &kp ESC    LA(LEFT)    LC(F)       LA(RIGHT)   &kp LCTRL        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LGUI       
+                &sk LALT   &sk LGUI    &sk LSHFT   &sk LCTRL   &sk RALT         &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp DEL 
+    &kp ESC     LC(Z)      LC(X)       LC(C)       TAB         LC(V)            &kp RET     &kp BSPC    &kp RCTRL   &kp LALT    &kp K_MENU   &kp LGUI         
                                         &trans      &trans     &trans           &trans      &mo ADJ     &trans      
                         >;
                 };
