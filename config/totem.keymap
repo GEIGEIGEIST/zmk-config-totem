@@ -19,7 +19,8 @@
 #define BASE 0
 #define NUM  1
 #define NAV  2
-#define ADJ  3
+#define SYM  3
+#define ADJ  4
 
 &mt {
   quick-tap-ms = <100>;
@@ -128,6 +129,32 @@ label= "NAV"                               ;
                 &sk LALT   &sk LGUI    &sk LSHFT   &sk LCTRL   &sk RALT         &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp DEL 
     &kp ESC     &kp LC(Z)  &kp LC(X)   &kp LC(C)   &kp TAB     &kp LC(V)        &kp RET     &kp BSPC    &kp RCTRL   &kp LALT    &kp K_MENU   &kp LGUI         
                                         &trans      &trans     &trans           &trans      &mo ADJ     &trans      
+                        >;
+                };
+
+// ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+
+                symbols_layer {
+// ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+label= "NAV"                               ;
+// ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+//             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
+//             ┃     ESC   ┃LAlt(left) ┃LCTL(F)    ┃LALT(riht) ┃   LCTRL   ┃   ┃ trans     ┃     &     ┃   `       ┃     ~     ┃  trans    ┃
+//             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
+//             ┃OSM,LALT   ┃OSM,LGUI   ┃OSM,LSHFT  ┃OSM,LCTRL  ┃OSM,RALT   ┃   ┃   trans   ┃     $     ┃  %        ┃  ^        ┃underscore ┃
+// ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
+// ┃    ESC    ┃  LCTL,Z   ┃ LCTL,X    ┃ LCTL,C    ┃  TAB      ┃ LCTRL,V   ┃   ┃   trans   ┃  !        ┃  @             ┃    #   ┃     trans ┃  trans    ┃
+// ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+//                                     ┃   trans   ┃ trans     ┃    trans  ┃   ┃    trans  ┃ trans     ┃     trans ┃
+//                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
+ bindings = <
+// ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
+
+                &kp ESC    &kp LA(LEFT) &kp LC(F) &kp LA(RIGHT) &kp LCTRL       &trans      &kp AMPS     &kp GRAVE    &kp TILDE   &trans       
+                &sk LALT   &sk LGUI    &sk LSHFT   &sk LCTRL   &sk RALT         &trans      &kp DOLLAR   &kp PRCNT    &kp CARET   &kp UNDER 
+    &kp ESC     &kp LC(Z)  &kp LC(X)   &kp LC(C)   &kp TAB     &kp LC(V)        &trans      &kp EXCL     &kp AT_SIGN  &kp POUND   &trans      &trans         
+                                        &trans      &trans     &trans           &trans      &trans       &trans      
                         >;
                 };
 
