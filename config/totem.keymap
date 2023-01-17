@@ -118,7 +118,7 @@ label= "NAV"                               ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃OSM,LALT   ┃OSM,LGUI   ┃OSM,LSHFT  ┃OSM,LCTRL  ┃OSM,RALT   ┃   ┃page down  ┃ AR LEFT   ┃   AR DOWN ┃  AR RIGT  ┃ DELETE    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃    ESC    ┃  LCTL,Z   ┃ LCTL,X    ┃ LCTL,C    ┃  TAB      ┃ LCTRL,V   ┃   ┃   enter   ┃  backspace┃  RCTRL    ┃    LALT   ┃  K_MENU   ┃  LGUI     ┃
+// ┃    ESC    ┃  LCTL,Z   ┃ LCTL,X    ┃ LCTL,C    ┃  TAB      ┃ LCTRL,V   ┃   ┃   enter   ┃  backspace┃  RCTRL    ┃    LALT   ┃  LGUI   ┃  LGUI     ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃   trans   ┃ trans     ┃    trans  ┃   ┃    trans  ┃ LAYER?    ┃     trans ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -127,7 +127,7 @@ label= "NAV"                               ;
 
                 &kp ESC    &kp LA(LEFT) &kp LC(F) &kp LA(RIGHT) &kp LCTRL        &kp PG_UP   &kp HOME    &kp UP      &kp END     &kp LGUI       
                 &sk LALT   &sk LGUI    &sk LSHFT   &sk LCTRL   &sk RALT         &kp PG_DN   &kp LEFT    &kp DOWN    &kp RIGHT   &kp DEL 
-    &kp ESC     &kp LC(Z)  &kp LC(X)   &kp LC(C)   &kp TAB     &kp LC(V)        &kp RET     &kp BSPC    &kp RCTRL   &kp LALT    &kp K_MENU   &kp LGUI         
+    &kp ESC     &kp LC(Z)  &kp LC(X)   &kp LC(C)   &kp TAB     &kp LC(V)        &kp RET     &kp BSPC    &kp RCTRL   &kp LALT    &kp LGUI   &kp LGUI         
                                         &trans      &trans     &trans           &trans      &mo FUN     &trans      
                         >;
                 };
