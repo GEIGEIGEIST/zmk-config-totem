@@ -108,7 +108,7 @@ label= "NUM"                               ;
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-
+""",,,"דד
                 nav_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 label= "NAV"                               ;
@@ -134,13 +134,13 @@ label= "NAV"                               ;
 
 // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-
+,ואזת =ת;4 ש 12]"""",,,,,,,,,,,,,,,ס,3-
                 symbols_layer {
 // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 label= "SYM"                               ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-//             ┃     ESC   ┃LAlt(left) ┃LCTL(F)    ┃LALT(riht) ┃   LCTRL   ┃   ┃ COMMA ,   ┃     &     ┃   `       ┃     ~     ┃  trans    ┃
+//             ┃     ESC   ┃LAlt(left) ┃LCTL(F)    ┃LALT(riht) ┃   LCTRL   ┃   ┃ COMMA ,HEB┃     &     ┃   `       ┃     ~     ┃  trans    ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃OSM,LALT   ┃OSM,LGUI   ┃OSM,LSHFT  ┃OSM,LCTRL  ┃OSM,RALT   ┃   ┃   trans   ┃     $     ┃  %        ┃  ^        ┃underscore ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
@@ -151,7 +151,7 @@ label= "SYM"                               ;
  bindings = <
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
-                &kp ESC    &kp LA(LEFT) &kp LC(F) &kp LA(RIGHT) &kp LCTRL       &kp COMMA   &kp AMPS     &kp GRAVE    &kp TILDE   &trans       
+                &kp ESC    &kp LA(LEFT) &kp LC(F) &kp LA(RIGHT) &kp LCTRL       &kp SQT     &kp AMPS     &kp GRAVE    &kp TILDE   &trans       
                 &sk LALT   &sk LGUI    &sk LSHFT   &sk LCTRL   &sk RALT         &trans      &kp DOLLAR   &kp PRCNT    &kp CARET   &kp UNDER 
     &kp ESC     &kp LC(Z)  &kp LC(X)   &kp LC(C)   &kp TAB     &kp LC(V)        &trans      &kp EXCL     &kp AT_SIGN  &kp POUND   &trans      &trans         
                                         &trans      &trans     &trans           &trans      &trans       &trans      
