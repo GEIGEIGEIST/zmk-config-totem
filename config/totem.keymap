@@ -79,11 +79,11 @@ label= "SYM"                                     ;
 // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
  bindings = <
 //               ┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓   ┏━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━┓
-                   &kp HASH      &kp LT        &kp GT        &kp EXCL      ___               &kp LBRC      &mbrc         &kp RBRC      &kp GRAVE     &msqt_morph
+                   &kp HASH      &kp LT        &kp GT        &kp EXCL      ___               &mbrc         &kp LBRC      &kp RBRC      &kp GRAVE     &msqt_morph
 //               ┣━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━┫
-                   SYM_CARET     SYM_MINUS     SYM_PLUS      SYM_EQUAL     &kp PRCNT         &kp LBKT      &mbkt         SYM_RBKT      SYM_AT        &kp DOLLAR
+                   SYM_CARET     SYM_MINUS     SYM_PLUS      SYM_EQUAL     &kp PRCNT         &mbkt         SYM_LBKT      SYM_RBKT      SYM_AT        SYM_DOLLAR
 // ┏━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━┓
-     &kp ENTER     &kp BSLH      &kp STAR      &kp PIPE      &kp AMPS      &kp TILDE         &kp LPAR      &mpar         &kp RPAR      &kp N3        &kp FSLH      &kp UNDER
+     &kp ENTER     &kp BSLH      &kp STAR      &kp PIPE      &kp AMPS      &kp TILDE         &mpar         &kp LPAR      &kp RPAR      &kp N3        &kp FSLH      &kp UNDER
 // ┗━━━━━━━━━━━━━┻━━━━━━━━━━━━━┻━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━┫   ┣━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━╋━━━━━━━━━━━━━┻━━━━━━━━━━━━━┻━━━━━━━━━━━━━┛
                                                ___           ___           ___               &kp UNDER    &key_repeat    ___
 //                                           ┗━━━━━━━━━━━━━┻━━━━━━━━━━━━━┻━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━┻━━━━━━━━━━━━━┻━━━━━━━━━━━━━┛

@@ -90,25 +90,13 @@ ZMK_BEHAVIOR(msqt_morph, mod_morph,
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand
 
-/* #define MAKE_MACRO_HRM(NAME, HOLD, MACRO, TRIGGER_POS) \ */
-/*     ZMK_BEHAVIOR(NAME, hold_tap, \ */
-/*         flavor = "balanced"; \ */
-/*         tapping-term-ms = <280>; \ */
-/*         quick-tap-ms = <QUICK_TAP_MS>; \ */
-/*         bindings = <HOLD>, <MACRO>; \ */
-/*         hold-trigger-key-positions = <TRIGGER_POS>; \ */
-/*         hold-trigger-on-release; \ */
-/*         ) */
-/**/
-
 
 // SYM Layer home row mods
 #define SYM_CARET  &hml LGUI CARET
 #define SYM_MINUS  &hml LALT MINUS
 #define SYM_PLUS   &hml LCTRL PLUS
 #define SYM_EQUAL  &hml LSHFT EQUAL
-/* MAKE_MACRO_HRM(mbkt_rshft, &kp RSHFT, &mbkt, KEYS_L THUMBS) */
-#define SYM_MBKT   &mbkt_rshft
+#define SYM_LBKT   &hml RSHFT LBKT
 #define SYM_RBKT   &hmr RCTRL RBKT
 #define SYM_AT     &hmr RALT AT
 #define SYM_DOLLAR &hmr RGUI DOLLAR
