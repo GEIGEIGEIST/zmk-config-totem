@@ -92,7 +92,7 @@
 
             bindings = <
        &kp Q             &kp W               &kp F  &kp P  &kp B          &kp J          &kp L        &kp U      &kp Y                    &kp SEMI
-       &kp S             &kp R               &kp S  &kp T  &kp G          &kp M          &kp N        &kp E      &kp I                    &kp O
+       &kp A             &kp R               &kp S  &kp T  &kp G          &kp M          &kp N        &kp E      &kp I                    &kp O
 &kp Q  &mt LEFT_SHIFT Z  &mt LEFT_COMMAND X  &kp C  &kp D  &kp V          &kp K          &kp M        &kp COMMA  &mt LEFT_COMMAND PERIOD  &mt LEFT_SHIFT TAB  &key_repeat
                                              &mo 5  &sl 2  &lt 1 SPACE    &kp BACKSPACE  &lt 4 ENTER  &kp BSPC
             >;
