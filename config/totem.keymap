@@ -35,15 +35,21 @@
         compatible = "zmk,combos";
 
         combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
+            key-positions = <11 12>;
             bindings = <&kp ESC>;
+            layers = <0 2>;
         };
 
         combo_tvp {
-            timeout-ms = <100>;
-            key-positions = <11 12 13>;
-            bindings = <&tog TVP1>;
+            key-positions = <2 1>;
+            bindings = <&kp TAB>;
+            layers = <0>;
+        };
+
+        remove-word {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <7 8>;
+            layers = <0>;
         };
     };
 
@@ -88,7 +94,7 @@
             bindings = <
        &kp Q             &kp W               &kp F  &kp P  &kp B          &kp J          &kp L            &kp U      &kp Y                    &kp SEMI
        &kp S             &kp R               &kp S  &kp T  &kp G          &kp M          &kp N            &kp E      &kp I                    &kp O
-&kp Q  &mt LEFT_SHIFT Z  &mt LEFT_COMMAND X  &kp C  &kp V  &kp B          &kp K          &kp M            &kp COMMA  &mt LEFT_COMMAND PERIOD  &mt LEFT_SHIFT TAB  &kp BSLH
+&kp Q  &mt LEFT_SHIFT Z  &mt LEFT_COMMAND X  &kp C  &kp V  &kp B          &kp K          &kp M            &kp COMMA  &mt LEFT_COMMAND PERIOD  &mt LEFT_SHIFT TAB  &key_repeat
                                              &mo 5  &sl 2  &lt 1 SPACE    &kt BACKSPACE  &lt 4 BACKSPACE  &kp BSPC
             >;
         };
@@ -112,10 +118,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC    &bt BT_CLR  &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-        &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&trans  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
-                               &trans    &trans     &trans      &mo ADJ   &kp KP_N0  &trans
+            &kp NUMBER_1           &kp NUMBER_2             &kp NUMBER_3       &kp NUMBER_4     &kp NUMBER_5    &kp NUMBER_6         &kp N7     &kp N8        &kp N9            &kp N0
+            &kp F5                 &kp F4                   &kp F3             &kp F2           &kp F1          &kp LEFT             &kp DOWN   &kp UP_ARROW  &kp RIGHT         &kp KP_MINUS
+&bt BT_NXT  &mt LEFT_SHIFT PERIOD  &mt LEFT_COMMAND K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp LPAR        &kp RPAR             &kp KP_N1  &kp KP_N2     &kp LEFT_COMMAND  &kp LEFT_SHIFT  &trans
+                                                            &trans             &trans           &trans          &mt LCTRL BACKSPACE  &trans     &trans
             >;
         };
 
@@ -138,10 +144,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL     &kp AT       &kp HASH   &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS        &kp RA(U)   &kp SQT     &kp DQT
-        &kp RA(A)    &trans       &kp RA(S)  &trans    &trans       &kp C_MUTE    &kp LS(RA(N4))  &kp RA(N5)  &kp RA(N4)  &kp RA(O)
-&trans  &kp RA(F18)  &kp RA(F19)  &trans     &trans    &trans       &kp C_VOL_DN  &kp C_VOL_UP    &kp C_PREV  &kp C_NEXT  &kp BSLH   &trans
-                                  &trans     &gif      &mo ADJ      &trans        &kp C_PP        &trans
+        &kp EXCL       &kp AT            &kp HASH           &kp DLLR       &kp PRCNT    &kp LESS_THAN   &kp LEFT_BRACKET      &kp EQUAL  &kp RIGHT_BRACKET      &kp GREATER_THAN
+        &kp QUESTION   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp SEMICOLON  &kp TILDE    &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp COLON  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE
+&trans  &kp BACKSLASH  &kp CARET         &kp PIPE           &kp AMPERSAND  &kp GRAVE    &kp SLASH       &kp UNDERSCORE        &kp MINUS  &kp PLUS               &kp BSLH          &trans
+                                         &trans             &gif           &trans       &trans          &trans                &trans
             >;
         };
 
@@ -173,10 +179,10 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        tvp1_layer {
+        NUM_LAYER {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "TVP 1";
+            label = "NUM";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
@@ -190,19 +196,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp TAB     &kp I      &kp LC(LALT)  &kp O        &kp LC(F20)    &none  &none  &none  &none  &none
-       &lt TVP2 L  &kp LEFT   &kp LALT      &kp RIGHT    &kp SPACE      &none  &none  &none  &none  &none
-&kp J  &kp LSHFT   &kp LC(C)  &kp BSPC      &kp LC(V)    &kp LC(F19)    &none  &none  &none  &none  &none  &none
-                              &trans        &kp LC(F14)  &kp LC(F13)    &none  &none  &none
+       &kp TAB       &kp I         &kp LC(LALT)  &kp O         &kp LC(F20)    &none         &none   &none   &none   &none
+       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0
+&kp J  &kp LSHFT     &kp LC(C)     &kp BSPC      &kp LC(V)     &kp LC(F19)    &none         &none   &none   &none   &none   &none
+                                   &trans        &kp LC(F14)   &kp LC(F13)    &none         &none   &none
             >;
         };
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        tvp2_layer {
+        WM_LAYER {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
-            label = "TVP 2";
+            label = "WM";
 
             // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
             //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
