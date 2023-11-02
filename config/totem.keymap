@@ -91,10 +91,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &kp Q             &kp W               &kp F  &kp P  &kp B          &kp J          &kp L        &kp U      &kp Y                    &kp SEMI
-       &kp A             &kp R               &kp S  &kp T  &kp G          &kp M          &kp N        &kp E      &kp I                    &kp O
-&kp Q  &mt LEFT_SHIFT Z  &mt LEFT_COMMAND X  &kp C  &kp D  &kp V          &kp K          &kp H        &kp COMMA  &mt LEFT_COMMAND PERIOD  &mt LEFT_SHIFT TAB  &key_repeat
-                                             &mo 5  &sl 2  &lt 1 SPACE    &kp BACKSPACE  &lt 4 ENTER  &kp BSPC
+       &kp Q             &kp W               &kp F  &kp P  &kp B          &kp J                     &kp L        &kp U      &kp Y                    &kp SEMI
+       &kp A             &kp R               &kp S  &kp T  &kp G          &kp M                     &kp N        &kp E      &kp I                    &kp O
+&kp Q  &mt LEFT_SHIFT Z  &mt LEFT_COMMAND X  &kp C  &kp D  &kp V          &kp K                     &kp H        &kp COMMA  &mt LEFT_COMMAND PERIOD  &mt LEFT_SHIFT AT_SIGN  &key_repeat
+                                             &mo 5  &sl 2  &lt 1 SPACE    &mt LEFT_SHIFT BACKSPACE  &lt 4 ENTER  &kp BSPC
             >;
         };
 
@@ -221,10 +221,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LC(F18)  &kp LS(I)     &kp LS(HOME)  &kp LS(O)      &kp LS(F)      &trans  &kp F7  &kp F8  &kp F9  &kp F12
-        &trans       &kp LS(LEFT)  &kp LC(F17)   &kp LS(RIGHT)  &kp RET        &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &kp J        &kp LS(C)     &kp LC(F16)   &kp LS(V)      &kp LC(F15)    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                                   &trans        &kp LC(F12)    &kp LC(F11)    &trans  &trans  &trans
+        &kp LC(F18)       &kp LS(I)         &kp LA(F)         &kp LS(O)         &kp LS(F)      &trans  &kp F7  &kp F8  &kp F9  &kp F12
+        &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(N5)     &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&trans  &kp J             &kp LS(C)         &kp LC(F16)       &kp LS(V)         &kp LC(F15)    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
+                                            &trans            &kp LC(F12)       &kp LC(F11)    &trans  &trans  &trans
             >;
         };
     };
