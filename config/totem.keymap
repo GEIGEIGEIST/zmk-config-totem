@@ -227,7 +227,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LC(F18)       &kp LS(I)         &kp LA(F)         &kp LS(O)         &kp LS(F)      &trans     &kp F7     &kp LA(U)  &kp F9     &kp F12
+        &kp LC(F18)       &kp LS(I)         &kp LA(F)         &kp LS(O)         &kp LS(F)      &kp LA(J)  &kp LA(L)  &kp LA(U)  &kp LA(Y)  &kp F12
         &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(N5)     &kp LA(M)  &kp LA(N)  &kp LA(E)  &kp LA(I)  &kp F11
 &trans  &kp J             &kp LS(C)         &kp LC(F16)       &kp LA(D)         &kp LC(F15)    &trans     &kp F1     &kp F2     &kp F3     &kp F10  &trans
                                             &trans            &kp LC(F12)       &kp LC(F11)    &mo 6      &trans     &trans
