@@ -226,9 +226,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LA(Q)         &kp LA(W)         &kp LA(F)         &kp LA(P)         &kp LA(B)      &kp LA(J)       &kp LA(L)  &kp LA(U)       &kp LA(Y)      &kp F12
+        &kp LA(Q)         &kp LA(W)         &kp LA(F)         &kp LA(P)         &kp LA(B)      &kp LA(J)       &kp LA(L)  &kp LA(U)       &kp LA(Y)      &bt BT_CLR
         &kp LA(NUMBER_1)  &kp LA(NUMBER_2)  &kp LA(NUMBER_3)  &kp LA(NUMBER_4)  &kp LA(N5)     &kp LA(M)       &kp LA(N)  &kp LA(E)       &kp LA(I)      &kp F11
-&trans  &kp LA(Z)         &kp LA(X)         &kp LA(C)         &kp LA(D)         &kp LA(V)      &kp LA(K)       &kp LA(H)  &kp LA(PERIOD)  &kp LA(COMMA)  &kp F10  &trans
+&trans  &kp LA(Z)         &kp LA(X)         &kp LA(C)         &kp LA(D)         &kp LA(V)      &kp LA(K)       &kp LA(H)  &kp LA(PERIOD)  &kp LA(COMMA)  &kp F10     &trans
                                             &trans            &kp LC(F12)       &kp LC(F11)    &kp LEFT_SHIFT  &trans     &trans
             >;
         };
