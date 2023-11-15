@@ -60,6 +60,11 @@
             bindings = <&kp LEFT_CONTROL>;
             key-positions = <33 36>;
         };
+
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <2 7>;
+        };
     };
 
     macros {
