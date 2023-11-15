@@ -55,6 +55,11 @@
             bindings = <&kp LCTRL>;
             key-positions = <18 19>;
         };
+
+        control {
+            bindings = <&kp LEFT_CONTROL>;
+            key-positions = <33 36>;
+        };
     };
 
     macros {
