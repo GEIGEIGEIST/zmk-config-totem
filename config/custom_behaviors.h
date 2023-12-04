@@ -53,6 +53,27 @@ ZMK_BEHAVIOR(comma_inner_morph, mod_morph,
     mods = <(MOD_LCTL|MOD_RCTL)>;
 )
 
+// tap: 1 | shift + tap: lparen
+ZMK_BEHAVIOR(n1_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp N1>, <&kp LPAREN>;
+)
+// tap: 2 | shift + tap: rparen
+ZMK_BEHAVIOR(n2_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp N2>, <&kp RPAREN>;
+)
+// tap: 4 | shift + tap: lbracket
+ZMK_BEHAVIOR(n4_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp N4>, <&kp LBKT>;
+)
+// tap: 5 | shift + tap: rbracket
+ZMK_BEHAVIOR(n5_morph, mod_morph,
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    bindings = <&kp N5>, <&kp RBKT>;
+)
+
 // tap: dot | shift + tap: colon | ctrl + shift + tap: >
 ZMK_BEHAVIOR(dot_morph, mod_morph,
     bindings = <&kp DOT>, <&dot_inner_morph>;
@@ -95,7 +116,7 @@ ZMK_BEHAVIOR(bs_del, mod_morph,
     keep-mods = <MOD_RSFT>;
 )
 
-// tap: sticky shift | double-tap: sticky num-layer | hold: num-layer
+// tap: sticky shift | double-tap: sticky num-layer | hold: layer
 ZMK_BEHAVIOR(shift_num, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -172,9 +193,10 @@ ZMK_BEHAVIOR(comma_dance, tap_dance,
 
 // Thumb keys
 #define SPC_NAV     &lt_spc NAV 0      // tap: space | shift + tap: underscore | hold: NAV layer
+#define TAB_HYP     &mt RHYP TAB       // tap: tab | hold: HYPER key
 #define RET_HYP     &mt RHYP ENTER     // tap: enter | hold: HYPER key
 #define BSPC_SYM    &lt_del SYM 0      // tap: backspace | lshft + tap: delete | rshft + tap: shift-delete | hold: SYM layer
-#define SHFT_NUM    &shift_num NUM 0   // tap: sticky shift | double-tap: sticky num layer | hold: NUM layer
+#define SHFT_MS     &shift_num MS 0    // tap: sticky shift | double-tap: sticky num layer | hold: MS layer
 
 /* #define MAKE_LONG_HOLD(NAME, HOLD) \ */
 /*     ZMK_BEHAVIOR(NAME, hold_tap, \ */

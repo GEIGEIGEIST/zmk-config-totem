@@ -2,12 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: cosmicbuffalo
-      url-base: https://github.com/cosmicbuffalo
   projects:
     - name: zmk
-      remote: cosmicbuffalo
-      revision: adv360
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config

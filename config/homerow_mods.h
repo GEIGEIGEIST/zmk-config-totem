@@ -8,10 +8,11 @@
       flavor = "balanced"; \
       tapping-term-ms = <280>; \
       quick-tap-ms = <QUICK_TAP_MS>; \
+      require-prior-idle-ms = <190>; \
       bindings = <HOLD>, <TAP>; \
       hold-trigger-key-positions = <TRIGGER_POS>; \
       hold-trigger-on-release; \
-      )
+  )
 
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand
