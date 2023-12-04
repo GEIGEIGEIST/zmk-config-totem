@@ -148,8 +148,8 @@ ZMK_BEHAVIOR(comma_dance, tap_dance,
 
 
 /* Apple Globe key */
-#define C_KEYBOARD_LAYOUT_SELECT (ZMK_HID_USAGE(HID_USAGE_CONSUMER, 0x029D))
-#define GLOBE C_KEYBOARD_LAYOUT_SELECT
+/* #define C_KEYBOARD_LAYOUT_SELECT (ZMK_HID_USAGE(HID_USAGE_CONSUMER, 0x029D)) */
+/* #define GLOBE_KEY C_KEYBOARD_LAYOUT_SELECT */
 // As per PR 1938
 
 // Spectacle controls
