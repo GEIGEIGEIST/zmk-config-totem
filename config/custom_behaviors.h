@@ -56,12 +56,12 @@ ZMK_BEHAVIOR(comma_inner_morph, mod_morph,
 // tap: 1 | shift + tap: lparen
 ZMK_BEHAVIOR(n1_morph, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
-    bindings = <&kp N1>, <&kp LPAREN>;
+    bindings = <&kp N1>, <&kp LPAR>;
 )
 // tap: 2 | shift + tap: rparen
 ZMK_BEHAVIOR(n2_morph, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
-    bindings = <&kp N2>, <&kp RPAREN>;
+    bindings = <&kp N2>, <&kp RPAR>;
 )
 // tap: 4 | shift + tap: lbracket
 ZMK_BEHAVIOR(n4_morph, mod_morph,
