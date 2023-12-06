@@ -160,7 +160,7 @@
             bindings = <
         &kp EXCL       &kp AT            &kp HASH           &kp DLLR       &kp PRCNT    &kp LESS_THAN   &kp LEFT_BRACKET      &kp EQUAL  &kp RIGHT_BRACKET      &kp GREATER_THAN
         &kp QUESTION   &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp SEMICOLON  &kp TILDE    &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp COLON  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE
-&trans  &kp BACKSLASH  &kp CARET         &kp PIPE           &kp AMPERSAND  &kp GRAVE    &kp SLASH       &kp UNDERSCORE        &kp MINUS  &kp PLUS               &kp BSLH          &trans
+&trans  &kp BACKSLASH  &kp CARET         &kp PIPE           &kp AMPERSAND  &kp GRAVE    &kp SLASH       &kp UNDERSCORE        &kp MINUS  &kp PLUS               &kp STAR          &trans
                                          &trans             &gif           &trans       &trans          &trans                &trans
             >;
         };
