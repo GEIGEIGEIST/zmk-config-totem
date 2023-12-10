@@ -164,8 +164,8 @@
 
             bindings = <
          &kp Q           &kp W           &kp E               &kp R             &kp T           &kp Y         &kp U              &kp I                &kp O                    &hm LG(LS(V)) P
-         &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G           &kp H         &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT I          &as COLON SEMICOLON
-&kp ESC  &kp Z           &kp X           &kp C               &kp V             &kp B           &kp N         &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &kp BSLH
+         &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G           &kp H         &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT LS(L)      &as COLON SEMICOLON
+&kp ESC  &kp Z           &kp X           &kp C               &kp V             &kp B           &kp N         &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &as PIPE BACKSLASH
                                          &ltq 1 BACKSPACE    &ltq 3 TAB        &ltq 2 SPACE    &ltq 2 SPACE  &ltq 3 ENTER       &ltq 4 DELETE
             >;
         };
