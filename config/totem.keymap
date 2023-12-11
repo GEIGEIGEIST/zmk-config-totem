@@ -118,6 +118,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <180>;
+            require-prior-idle-ms = <125>;
         };
 
         ltq: ltq {
@@ -164,8 +165,8 @@
 
             bindings = <
          &kp Q           &kp W           &kp E               &kp R             &kp T           &kp Y         &kp U              &kp I                &kp O                    &hm LG(LS(V)) P
-         &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G           &kp H         &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT LS(L)      &as COLON SEMICOLON
-&kp ESC  &kp Z           &kp X           &kp C               &kp V             &kp B           &kp N         &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &as PIPE BACKSLASH
+         &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LEFT_CONTROL D  &hm LEFT_SHIFT F  &kp G           &kp H         &hm RIGHT_SHIFT J  &hm RIGHT_CONTROL K  &hm RIGHT_ALT L          &as COLON SEMICOLON
+&kp ESC  &kp Z           &kp X           &kp C               &kp V             &kp B           &kp N         &kp M              &as LESS_THAN COMMA  &as GREATER_THAN PERIOD  &as QUESTION SLASH   &as DOUBLE_QUOTES SINGLE_QUOTE
                                          &ltq 1 BACKSPACE    &ltq 3 TAB        &ltq 2 SPACE    &ltq 2 SPACE  &ltq 3 ENTER       &ltq 4 DELETE
             >;
         };
@@ -215,9 +216,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-               &kp EXCL    &kp AT        &kp HASH  &kp DLLR  &kp PRCNT         &kp CARET  &kp AMPS        &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-               &kp ESC     &kp CAPSLOCK  &kp HOME  &kp END   &kp UNDERSCORE    &kp MINUS  &kp LS(RA(N4))  &kp RA(N5)        &kp RA(N4)            &kp RA(INSERT)
-&kp LA(SPACE)  &kp DELETE  &trans        &trans    &trans    &kp TILDE         &kp GRAVE  &kp EQUAL       &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES     &kp BACKSPACE          &trans
+               &kp EXCL    &kp AT        &kp HASH  &kp DLLR  &kp PRCNT         &kp CARET  &kp AMPS        &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+               &kp ESC     &kp CAPSLOCK  &kp HOME  &kp END   &kp UNDERSCORE    &kp MINUS  &kp LS(RA(N4))  &kp RA(N5)     &kp RA(N4)            &kp RA(INSERT)
+&kp LA(SPACE)  &kp DELETE  &trans        &trans    &trans    &kp TILDE         &kp GRAVE  &kp EQUAL       &kp BACKSLASH  &kp PIPE              &kp BACKSPACE          &trans
                                          &trans    &trans    &trans            &trans     &trans          &trans
             >;
         };
