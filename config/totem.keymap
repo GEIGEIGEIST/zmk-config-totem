@@ -190,10 +190,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &bt BT_CLR  &trans        &kp UP    &kp EQUAL  &trans               &trans                &trans  &trans  &trans  &trans
-        &bt BT_NXT  &kp LEFT      &kp DOWN  &kp RIGHT  &kp C_VOLUME_UP      &kp C_BRIGHTNESS_INC  &trans  &trans  &trans  &trans
-&trans  &bt BT_PRV  &out OUT_TOG  &trans    &trans     &kp C_VOLUME_DOWN    &kp C_BRIGHTNESS_DEC  &trans  &trans  &trans  &trans  &trans
-                                  &trans    &trans     &trans               &trans                &trans  &trans
+        &trans  &trans        &kp UP    &kp EQUAL  &trans               &bt BT_SEL 0          &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+        &trans  &kp LEFT      &kp DOWN  &kp RIGHT  &kp C_VOLUME_UP      &kp C_BRIGHTNESS_INC  &bt BT_CLR    &trans        &trans        &trans
+&trans  &trans  &out OUT_TOG  &trans    &trans     &kp C_VOLUME_DOWN    &kp C_BRIGHTNESS_DEC  &trans        &trans        &trans        &trans        &out OUT_TOG
+                              &trans    &trans     &trans               &trans                &trans        &trans
             >;
         };
 
@@ -218,7 +218,7 @@
             bindings = <
                &kp EXCL    &kp AT        &kp HASH  &kp DLLR  &kp PRCNT         &kp CARET  &kp AMPS        &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
                &kp ESC     &kp CAPSLOCK  &kp HOME  &kp END   &kp UNDERSCORE    &kp MINUS  &kp LS(RA(N4))  &kp RA(N5)     &kp RA(N4)            &kp RA(INSERT)
-&kp LA(SPACE)  &kp DELETE  &trans        &trans    &trans    &kp TILDE         &kp GRAVE  &kp EQUAL       &kp BACKSLASH  &kp PIPE              &kp BACKSPACE          &trans
+&kp LA(SPACE)  &kp DELETE  &trans        &trans    &trans    &kp TILDE         &kp GRAVE  &as PLUS EQUAL  &kp BACKSLASH  &kp PIPE              &kp BACKSPACE          &trans
                                          &trans    &trans    &trans            &trans     &trans          &trans
             >;
         };
