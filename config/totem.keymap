@@ -62,7 +62,7 @@
            &kp Q       &kp W       &kp F        &kp P        &kp B          &kp J        &kp L            &kp U        &kp Y       &kp SEMI
            &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LSHFT T  &kp G          &kp M        &mt RSHFT N      &mt RCTRL E  &mt RALT I  &mt RGUI O
 &kp GRAVE  &kp Z       &kp X       &kp C        &kp D        &kp V          &kp K        &kp H            &kp COMMA    &kp DOT     &kp FSLH    &kp BSLH
-                                   &lt 1 TAB    &lt 2 ESC    &lt 3 SPACE    &lt 4 ENTER  &lt 5 BACKSPACE  &kp DEL
+                                   &lt 1 TAB    &lt 2 ESC    &lt 3 SPACE    &lt 4 ENTER  &lt 5 BACKSPACE  &lt 6 DEL
             >;
         };
 
@@ -112,10 +112,10 @@
 
         num_layer {
             bindings = <
-        &kp GRAVE  &kp N1  &kp N2  &kp N3     &kp MINUS    &trans  &kp LBKT   &kp RBKT   &trans    &trans
-        &trans     &kp N4  &kp N5  &kp N6     &kp PLUS     &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI
-&trans  &trans     &kp N7  &kp N8  &kp N9     &kp STAR     &trans  &trans     &trans     &trans    &trans    &trans
-                           &kp N0  &kp EQUAL  &kp SPACE    &trans  &trans     &trans
+        &kp GRAVE  &kp N1  &kp N2  &kp N3     &kp MINUS    &trans  &kp LBKT        &kp RBKT         &kp SQT   &kp DQT
+        &trans     &kp N4  &kp N5  &kp N6     &kp PLUS     &trans  &kp RSHFT       &kp RCTRL        &kp RALT  &kp RGUI
+&trans  &trans     &kp N7  &kp N8  &kp N9     &kp STAR     &trans  &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans    &trans    &trans
+                           &kp N0  &kp EQUAL  &kp SPACE    &trans  &trans          &trans
             >;
         };
 
