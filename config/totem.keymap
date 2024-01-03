@@ -101,10 +101,10 @@
 
         media_layer {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans      &trans            &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans      &trans            &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans      &trans            &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &kt K_STOP  &kp C_PLAY_PAUSE  &trans
+        &trans    &trans    &trans     &trans     &trans    &trans      &trans            &trans        &trans        &trans
+        &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans    &trans      &kp K_PREV        &kp C_VOL_DN  &kp C_VOL_UP  &kp K_NEXT
+&trans  &trans    &trans    &trans     &trans     &trans    &trans      &trans            &trans        &trans        &trans      &trans
+                            &trans     &trans     &trans    &kt K_STOP  &kp C_PLAY_PAUSE  &kp K_MUTE
             >;
 
             label = "media";
