@@ -108,7 +108,7 @@ label= "SYM"                               ;
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
                 &kp GRAVE   &trans      &trans      &trans      &kp LBKT        &kp RBKT    &trans      &trans      &trans      &kp APOS
     &kp LSHFT   &kp DEL     &trans      &trans      &trans      &kp LPAR        &kp RPAR    &trans      &trans      &trans      &kp BSLH     &to FNC      
-                                        &kp LCTRL   &kp LALT    &kp LGUI        &kp MINUS  &kp    EQUAL   &KP    PLUS      
+                                        &kp LCTRL   &kp LALT    &kp LGUI        &kp MINUS   &kp EQUAL   &kp PLUS      
                         >;
                 };
 
