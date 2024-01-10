@@ -23,6 +23,8 @@
 #define TVP1 4
 #define TVP2 5
 
+
+
 &mt {
   quick-tap-ms = <100>;
   global-quick-tap;
@@ -80,7 +82,7 @@ label= "BASE"                              ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
-                &kp A       &kp S       &kp D       &kp F       &kp G           &kp H       &kp J       &kp K       &kp L       &kp MINUS
+                &kp A       &kp S       &kp D       &lt FNC F   &kp G           &kp H       &mt RCTRL J &kp K       &kp L       &kp MINUS
     &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &mt RSHFT BSPC
                                         &kp LALT    &kp LGUI    &mt LCTRL SPACE &lt SYM SPACE &lt FNC RET &kp BSPC
                         >;
