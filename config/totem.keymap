@@ -83,7 +83,7 @@ label= "BASE"                              ;
 
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp A       &kp S       &kp D       &lt FNC F   &kp G           &kp H       &mt RCTRL J &kp K       &kp L       &kp MINUS
-&mt LSHFT TAB    &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &mt RSHFT DEL
+&mt LSHFT TAB   &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &mt RSHFT DEL
                                         &mt LALT ESC &kp LGUI    &mt LCTRL SPACE &lt SYM SPACE &lt FNC RET &mt RCTRL BSPC
                         >;
                 };
@@ -98,7 +98,7 @@ label= "SYM"                               ;
 //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
 //             ┃     1     ┃     2     ┃     3     ┃     4     ┃     5     ┃   ┃     6     ┃     7     ┃     8     ┃     9     ┃     0     ┃
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-//             ┃   GRAVE   ┃           ┃           ┃           ┃     [     ┃   ┃     ]     ┃           ┃           ┃     '     ┃     ;     ┃
+//             ┃   GRAVE   ┃           ┃           ┃           ┃     [     ┃   ┃     ]     ┃     !     ┃     ?     ┃     '     ┃     ;     ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
 // ┃   SHIFT   ┃           ┃           ┃           ┃           ┃     (     ┃   ┃     )     ┃     -     ┃     =     ┃     +     ┃     \     ┃   SH/DEL  ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -108,7 +108,7 @@ label= "SYM"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
-                &kp GRAVE   &trans      &trans      &trans      &kp LBKT        &kp RBKT    &trans      &trans      &kp APOS    &kp SEMI
+                &kp GRAVE   &trans      &trans      &trans      &kp LBKT        &kp RBKT    &kp EXCL    &kp QMARK   &kp APOS    &kp SEMI
  &mt LSHFT TAB   &kp DEL    &trans      &trans      &trans      &kp LPAR        &kp RPAR    &kp MINUS   &kp EQUAL   &kp PLUS    &kp BSLH    &mt RSHFT DEL
                                         &mt LALT ESC &kp LGUI   &mt LCTRL SPACE &kp SPACE   &lt FNC RET &kp BSPC
                         >;
