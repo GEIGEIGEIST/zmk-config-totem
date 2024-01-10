@@ -83,8 +83,8 @@ label= "BASE"                              ;
 
                 &kp Q       &kp W       &kp E       &kp R       &kp T           &kp Y       &kp U       &kp I       &kp O       &kp P
                 &kp A       &kp S       &kp D       &lt FNC F   &kp G           &kp H       &mt RCTRL J &kp K       &kp L       &kp MINUS
-    &kp LSHFT   &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &mt RSHFT BSPC
-                                        &kp LALT    &kp LGUI    &mt LCTRL SPACE &lt SYM SPACE &lt FNC RET &kp BSPC
+&mt LSHFT TAB    &kp Z       &kp X       &kp C       &kp V       &kp B           &kp N       &kp M       &kp COMMA   &kp DOT     &kp FSLH    &mt RSHFT BSPC
+                                        &mt LALT ESC &kp LGUI    &mt LCTRL SPACE &lt SYM SPACE &lt FNC RET &mt RCTRL BSPC
                         >;
                 };
 
@@ -109,8 +109,8 @@ label= "SYM"                               ;
 
                 &kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp N6      &kp N7      &kp N8      &kp N9      &kp N0
                 &kp GRAVE   &trans      &trans      &trans      &kp LBKT        &kp RBKT    &trans      &trans      &kp APOS    &kp SEMI
-    &kp LSHFT   &kp DEL     &trans      &trans      &trans      &kp LPAR        &kp RPAR    &kp MINUS   &kp EQUAL   &kp PLUS    &kp BSLH    &mt RSHFT BSPC
-                                        &kp LALT    &kp LGUI    &mt LCTRL SPACE &kp SPACE   &lt FNC RET &kp BSPC
+ &mt LSHFT TAB   &kp DEL    &trans      &trans      &trans      &kp LPAR        &kp RPAR    &kp MINUS   &kp EQUAL   &kp PLUS    &kp BSLH    &mt RSHFT BSPC
+                                        &mt LALT ESC &kp LGUI   &mt LCTRL SPACE &kp SPACE   &lt FNC RET &kp BSPC
                         >;
                 };
 
@@ -126,7 +126,7 @@ label= "FNC"                               ;
 //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
 //             ┃    ESC    ┃           ┃           ┃           ┃           ┃   ┃   LEFT    ┃   DOWN    ┃    UP     ┃   RIGHT   ┃    DEL    ┃
 // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-// ┃   SHIFT   ┃    TAB    ┃           ┃           ┃           ┃           ┃   ┃   HOME    ┃   PGDN    ┃   PGUP    ┃   END     ┃    INS    ┃  SH/BSPC  ┃
+// ┃   SHIFT   ┃           ┃           ┃           ┃           ┃           ┃   ┃   HOME    ┃   PGDN    ┃   PGUP    ┃   END     ┃    INS    ┃  SH/BSPC  ┃
 // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 //                                     ┃    ALT    ┃    GUI    ┃    CTRL   ┃   ┃    SPC    ┃   ENTER   ┃   BSPC    ┃
 //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
@@ -134,9 +134,9 @@ label= "FNC"                               ;
 // ╷           ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷           ╷
 
                 &kp F1      &kp F2      &kp F3      &kp F4      &kp F5          &kp F6       &kp F7       &kp F8     &kp F9       &kp F10       
-                &kp ESC     &trans      &trans      &trans      &trans          &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT    &kp DEL 
-    &kp LSHFT   &kp TAB     &trans      &trans      &trans      &trans          &kp HOME     &kp PG_DN    &kp PG_UP  &kp END      &kp INS    &mt RSHFT BSPC
-                                        &kp LALT    &kp LGUI    &mt LCTRL SPACE &lt SYM SPACE &kp RET &kp BSPC   
+                &kp LC(A)   &trans      &trans      &trans      &trans          &kp LEFT     &kp DOWN     &kp UP     &kp RIGHT    &kp DEL 
+&mt LSHFT TAB   &kp LC(Z)   &kp LC(X)   &kp LC(C)   &kp LC(V)     &trans          &kp HOME     &kp PG_DN    &kp PG_UP  &kp END      &kp INS    &mt RSHFT BSPC
+                                        &mt LALT ESC &kp LGUI   &mt LCTRL SPACE &lt SYM SPACE &kp RET &kp BSPC   
                         >;
                 };
         };
