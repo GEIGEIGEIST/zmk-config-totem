@@ -168,5 +168,5 @@
                               &trans    &kp LCTRL &kp LSHFT     &trans    &trans   &trans
       >;
       };
+    };
 };
-
