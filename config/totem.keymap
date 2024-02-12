@@ -71,17 +71,6 @@
         };
     };
 
-    macros {
-        ball_speed: ball_speed {
-            label = "ball_speed";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp CAPS &kp CAPS &kp NUM &kp NUM>
-                ;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
