@@ -162,9 +162,9 @@
 // |    |     |     |     |     |     |   |     | WHDN|     |     |     |     |
 //                       |     |     |     |    |     |
       bindings = <
-          &none     &none &mmv MOVE_UP &none     &none         &ball_speed     &mwh SCROLL_UP    &none     &none     &none
-          &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none         &mwh SCROLL_LEFT &mkp LCLK &mkp MCLK &mkp RCLK &mwh SCROLL_RIGHT
-   &none  &none     &none     &none     &none     &none         &none     &mwh SCROLL_DOWN    &none     &none     &none     &none
+          &none     &none &mmv MOVE_UP &none     &none         &ball_speed     &msc SCROLL_UP    &none     &none     &none
+          &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none         &msc SCROLL_LEFT &mkp LCLK &mkp MCLK &mkp RCLK &msc SCROLL_RIGHT
+   &none  &none     &none     &none     &none     &none         &none     &msc SCROLL_DOWN    &none     &none     &none     &none
                               &trans    &kp LCTRL &kp LSHFT     &trans    &trans   &trans
       >;
       };
