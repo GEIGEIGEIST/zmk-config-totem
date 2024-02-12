@@ -61,42 +61,43 @@
         };
     };
 
-          combos {
-            compatible = "zmk,combos";
+    combos {
+        compatible = "zmk,combos";
 
-            combo_capsword {
-                  timeout-ms = <50>;
-                  key-positions = <14 17>;
-                  bindings = <&caps_word>;
-            };
+        combo_capsword {
+              timeout-ms = <50>;
+              key-positions = <14 17>;
+              bindings = <&caps_word>;
         };
+    };
 
-        macros {
-            ball_speed: ball_speed {
-                label = "ball_speed";
-                compatible = "zmk,behavior-macro";
-                #binding-cells = <0>;
-                bindings
-                    = <&macro_tap &kp CAPS &kp CAPS &kp NUM &kp NUM>
-                    ;
-            };
+    macros {
+        ball_speed: ball_speed {
+            label = "ball_speed";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp CAPS &kp CAPS &kp NUM &kp NUM>
+                ;
         };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-                default_layer {
+        default_layer {
 // -------------------------------------------------------------------------------------
 // |      |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  '  |           |
 // |      |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |           |
 // |      |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  |           |
 //                    | NUM | SYM | BSPC/NAV | SPC/NAV | WIN | MSE |
-                        bindings = <
+       bindings = <
            &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SQT
            &hm LCTRL A &hs LALT R &hm LGUI S &hf LSHFT T &kp G   &kp M &hf RSHFT N  &hm RGUI E &hs LALT I &hm RCTRL O
    &none &lt NUM Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &lt WIN FSLH &none
                         &mo NUM &lt SYM ESC &lt NAV BSPC &lt NAV SPACE &lt MSE RET &mo WIN
-                        >;
-                };
+       >;
+       };
 
                 sym_layer {
 // ----------------------------------------------------------------------------
@@ -104,13 +105,13 @@
 // |    |  #  |  $  |  (  |  )  |  `  |   |  -  |  =  |  +  |  _  |  ;  |     |
 // |    |  %  |  ^  |  [  |  ]  |  ~  |   |  /  |  ?  |  ,  |  .  |  /  |     |
 //                       |     |     |     |    |     |
-                        bindings = <
+      bindings = <
           &kp EXCL  &kp AT   &kp LBRC &kp RBRC &kp PIPE       &kp AMPS &kp ASTRK &kp LT  &kp GT  &kp SQT
           &kp HASH  &kp DLLR &kp LPAR &kp RPAR &kp GRAVE      &kp MINUS &kp EQUAL &kp PLUS &kp UNDER &kp SEMI
    &trans &kp PRCNT &kp CARET &kp LBKT &kp RBKT &kp TILDE     &kp BSLH &kp COLON &kp COMMA &kp DOT &kp FSLH &trans
                         &trans       &trans      &trans       &trans         &trans   &trans
-                        >;
-                };
+      >;
+      };
 
                 nav_layer {
 // ----------------------------------------------------------------------------------
@@ -118,13 +119,13 @@
 // |    | CTRL| ALT | GUI | SHFT|     |   |     | HOME| LEFT |DOWN|RIGHT | END |     |
 // |    | UNDO| CUT |COPY | MENU| PSTE|   |     | <tab| PGDN |    |      | tab>|     |
 //                       |     |     |     |    |     |
-                        bindings = <
+      bindings = <
           &none     &none     &none     &none     &none         &none &kp PG_UP &kp UP &none &kp INS
           &kp LCTRL &kp LALT  &kp LGUI  &kp LSHFT &none         &kp HOME &kp LEFT &kp DOWN &kp RIGHT &kp END
    &trans &kp LG(Z) &kp LG(X) &kp LG(C) &kp K_APP &kp LG(V)     &kp LS(LC(TAB)) &kp PG_DN &none &none &kp LC(TAB) &none
                         &trans       &trans      &kp DEL       &kp TAB        &trans     &trans
-                        >;
-                };
+      >;
+      };
 
                 num_layer {
 // ----------------------------------------------------------------------------
@@ -132,42 +133,40 @@
 // |    | F5  | F6  | F7  | F8  |     |   |     |  4  |  5  |  6  |     |     |
 // |    | F9  | F10 | F11 | F12 |     |   |     |  1  |  2  |  3  |     |     |
 //                       |     |     |     |    |     |
-                        bindings = <
+      bindings = <
           &kp F1    &kp F2    &kp F3    &kp F4    &none         &none     &kp N7    &kp N8    &kp N9    &kp N0
           &kp F5    &kp F6    &kp F7    &kp F8    &none         &none     &kp N4    &kp N5    &kp N6    &none
    &trans &kp F9    &kp F10   &kp F11   &kp F12   &none         &none     &kp N1    &kp N2    &kp N3    &none     &none
                         &trans      &trans      &trans          &none     &kp N0    &none
-                        >;
-                };
+      >;
+      };
 
-
-                win_layer {
+      win_layer {
 // -----------------------------------------------------------------------------------------------------------------------------
 // |       |  BT_CLR  |          | VOL_UP     |          |BT 0     |   |         | ZOOM +| WIN U | WIN LG  |         |        |
 // |       |          | PREV     | PLAY       | NEXT     |BT 1     |   |SCRNSHOT | WIN L | WIN D | WIN R   |  FULL   |        |
 // |       |          |          | VOL_DN     | MUTE     |BT 2     |   |         | ZOOM -|       | WIN SM  |         |        |
 //                                              |     |     |     |     |     |
-                        bindings = <
+      bindings = <
          &bt BT_CLR &none &kp C_VOL_UP &none &bt BT_SEL 0                    &none &kp LG(EQUAL) &kp LC(LA(UP)) &kp LC(LA(EQUAL)) &none
          &none &kp C_PREV &kp C_PP &kp C_NEXT &bt BT_SEL 1                   &kp LS(LG(N5)) &kp LC(LA(LEFT)) &kp LC(LA(DOWN)) &kp LC(LA(RIGHT)) &kp LC(LA(RET))
    &none &none &none &kp C_VOL_DN &kp C_MUTE &bt BT_SEL 2                    &none &kp LG(MINUS) &none &kp LC(LA(MINUS)) &none &none
                         &trans     &trans      &trans       &trans        &trans      &trans
-                        >;
-                };
+      >;
+      };
 
-                mse_layer {
+      mse_layer {
 // ----------------------------------------------------------------------------
 // |    |     |     | UP  |     |     |   | SPD | WHUP|     |     |     |     |
 // |    |     | LEFT|DOWN |RIGHT|     |   | WHL | BTN1| BTN2| BTN3| WHR |     |
 // |    |     |     |     |     |     |   |     | WHDN|     |     |     |     |
 //                       |     |     |     |    |     |
-                        bindings = <
+      bindings = <
           &none     &none &mmv MOVE_UP &none     &none         &ball_speed     &mwh SCROLL_UP    &none     &none     &none
           &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none         &mwh SCROLL_LEFT &mkp LCLK &mkp MCLK &mkp RCLK &mwh SCROLL_RIGHT
    &none  &none     &none     &none     &none     &none         &none     &mwh SCROLL_DOWN    &none     &none     &none     &none
                               &trans    &kp LCTRL &kp LSHFT     &trans    &trans   &trans
-                        >;
-                };
-    };
+      >;
+      };
 };
 
