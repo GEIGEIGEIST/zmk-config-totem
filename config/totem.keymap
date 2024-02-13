@@ -71,6 +71,17 @@
         };
     };
 
+    macros {
+        ball_speed: ball_speed {
+            label = "ball_speed";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp CAPS &kp CAPS &kp NUM &kp NUM>
+                ;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -150,12 +161,12 @@
 // |    |     | LEFT|DOWN |RIGHT|     |   | WHL | BTN1| BTN2| BTN3| WHR |     |
 // |    |     |     |     |     |     |   |     | WHDN|     |     |     |     |
 //                       |     |     |     |    |     |
-      bindings = <
-          &none     &none &mmv MOVE_UP &none     &none         &none     &msc SCROLL_UP    &none     &none     &none
-          &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none         &msc SCROLL_LEFT &mkp LCLK &mkp MCLK &mkp RCLK &msc SCROLL_RIGHT
-   &none  &none     &none     &none     &none     &none         &none     &msc SCROLL_DOWN    &none     &none     &none     &none
+                        bindings = <
+          &none     &none &mmv MOVE_UP &none     &none         &ball_speed     &none    &none     &none     &none
+          &none     &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none         &none &mkp MB1 &mkp MB2 &mkp MB3 &none
+   &none  &none     &none     &none     &none     &none         &none     &none   &none     &none     &none     &none
                               &trans    &kp LCTRL &kp LSHFT     &trans    &trans   &trans
-      >;
+                        >;
       };
     };
 };
