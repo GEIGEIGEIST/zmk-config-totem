@@ -1,0 +1,6 @@
+# pack-refs with: peeled fully-peeled sorted 
+c17b270fbf2bb063ed34842d476aacf48b41d887 refs/remotes/origin/charybdis
+2c6afe42e63c89330ecce3c775cfb5ac2eedcda5 refs/remotes/origin/charybdis-3.5
+086af70bc1b7de1223f88b80c4bf29784947ee92 refs/remotes/origin/master
+77e8314f684c1f4b82585c414717cfa4e0c37f6c refs/remotes/origin/totem
+eeb1147aa636869b693fa69b8da039aefaa0d6e3 refs/remotes/origin/totem-dongle

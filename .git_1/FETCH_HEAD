@@ -1,0 +1,5 @@
+086af70bc1b7de1223f88b80c4bf29784947ee92		branch 'master' of https://github.com/eigatech/zmk-config
+c17b270fbf2bb063ed34842d476aacf48b41d887	not-for-merge	branch 'charybdis' of https://github.com/eigatech/zmk-config
+2c6afe42e63c89330ecce3c775cfb5ac2eedcda5	not-for-merge	branch 'charybdis-3.5' of https://github.com/eigatech/zmk-config
+77e8314f684c1f4b82585c414717cfa4e0c37f6c	not-for-merge	branch 'totem' of https://github.com/eigatech/zmk-config
+eeb1147aa636869b693fa69b8da039aefaa0d6e3	not-for-merge	branch 'totem-dongle' of https://github.com/eigatech/zmk-config
