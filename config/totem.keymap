@@ -112,7 +112,7 @@
 
             bindings = <
         &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5    &kp KP_NUMBER_6  &kp KP_N7  &kp KP_N8     &kp KP_N9  &kp KP_NUMBER_0
-        &kp LSHFT        &trans           &trans           &trans           &trans             &kp LEFT         &kp DOWN   &kp UP_ARROW  &kp RIGHT  &kp KP_MINUS
+        &kp LSHFT        &trans           &trans           &trans           &trans             &kp LEFT         &kp DOWN   &kp UP_ARROW  &kp RIGHT  &kp MINUS
 &trans  &kp DEL          &kp PG_UP        &kp CAPS         &kp PG_DN        &kp LPAR           &kp RPAR         &trans     &trans        &trans     &kp KP_MULTIPLY  &trans
                                           &trans           &trans           &trans             &mo ADJ          &kp KP_N0  &trans
             >;
