@@ -9,7 +9,11 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
+    env:
+      # The runner has clang 16, 17 and 18. bindgen (used by nrf-mpsl-sys) must use 18,
+      # older libclang versions fail with "unknown type name 'uint32_t'".
+      LIBCLANG_PATH: /usr/lib/llvm-18/lib
     defaults:
       run:
         working-directory: rmk
@@ -18,7 +22,7 @@ jobs:
 
       # p256-cortex-m4-sys (BLE crypto) compiles C code for the nRF52840
       - name: Install ARM GCC
-        run: sudo apt-get update && sudo apt-get install -y gcc-arm-none-eabi libnewlib-arm-none-eabi
+        run: sudo apt-get update && sudo apt-get install -y gcc-arm-none-eabi libnewlib-arm-none-eabi libclang-18-dev
 
       - name: Install Rust (stable + thumbv7em target)
         run: rustup toolchain install # reads rmk/rust-toolchain.toml
