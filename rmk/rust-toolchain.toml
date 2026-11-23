@@ -1,0 +1,4 @@
+[toolchain]
+channel = "stable"
+components = ["llvm-tools"]
+targets = ["thumbv7em-none-eabihf"]

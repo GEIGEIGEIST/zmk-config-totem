@@ -1,0 +1,66 @@
+[package]
+name = "totem-rmk"
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+# Rynk instead of Vial (they are mutually exclusive; keyboard.toml [host] must match).
+rmk = { version = "=0.9.0", default-features = false, features = [
+    "defmt",
+    "storage",
+    "rynk",
+    "watchdog",
+    "split",
+    "nrf52840_ble",
+    "adafruit_bl",
+    "async_matrix",
+    "ssd1306",
+] }
+nrf-sdc = { version = "0.4.0", features = ["defmt", "peripheral", "central", "nrf52840"] }
+nrf-mpsl = { version = "0.4.0", features = ["defmt", "critical-section-impl", "nrf52840"] }
+bt-hci = { version = "0.10", features = ["defmt"] }
+cortex-m = "0.7.7"
+cortex-m-rt = "0.7.5"
+embassy-time = { version = "0.5", features = ["tick-hz-32_768", "defmt", "defmt-timestamp-uptime"] }
+embassy-nrf = { version = "0.11", features = [
+    "defmt",
+    "nrf52840",
+    "time-driver-rtc1",
+    "gpiote",
+    "unstable-pac",
+    "nfc-pins-as-gpio",
+    "time",
+] }
+embassy-executor = { version = "0.10", features = ["defmt", "platform-cortex-m", "executor-thread"] }
+defmt = "1"
+defmt-rtt = "1"
+panic-probe = { version = "1", features = ["print-defmt"] }
+static_cell = "2"
+
+[[bin]]
+name = "totem_dongle"
+path = "src/dongle.rs"
+
+[[bin]]
+name = "totem_left"
+path = "src/left.rs"
+
+[[bin]]
+name = "totem_right"
+path = "src/right.rs"
+
+[profile.dev]
+codegen-units = 1
+debug = true
+opt-level = 1
+overflow-checks = true
+lto = false
+panic = "unwind"
+
+[profile.release]
+codegen-units = 1
+debug = true
+opt-level = "z"
+overflow-checks = false
+lto = "fat"

@@ -1,0 +1,35 @@
+# `cargo make uf2 --release` -> totem_dongle.uf2, totem_left.uf2, totem_right.uf2
+# Needs: cargo install cargo-make cargo-binutils cargo-hex-to-uf2 flip-link
+
+[env]
+UF2_FAMILY = "nrf52840"
+
+[tasks.hex-dongle]
+command = "cargo"
+args = ["objcopy", "--release", "--bin", "totem_dongle", "--", "-O", "ihex", "totem_dongle.hex"]
+
+[tasks.hex-left]
+command = "cargo"
+args = ["objcopy", "--release", "--bin", "totem_left", "--", "-O", "ihex", "totem_left.hex"]
+
+[tasks.hex-right]
+command = "cargo"
+args = ["objcopy", "--release", "--bin", "totem_right", "--", "-O", "ihex", "totem_right.hex"]
+
+[tasks.uf2-dongle]
+command = "cargo"
+args = ["hex-to-uf2", "--input-path", "totem_dongle.hex", "--output-path", "totem_dongle.uf2", "--family", "${UF2_FAMILY}"]
+dependencies = ["hex-dongle"]
+
+[tasks.uf2-left]
+command = "cargo"
+args = ["hex-to-uf2", "--input-path", "totem_left.hex", "--output-path", "totem_left.uf2", "--family", "${UF2_FAMILY}"]
+dependencies = ["hex-left"]
+
+[tasks.uf2-right]
+command = "cargo"
+args = ["hex-to-uf2", "--input-path", "totem_right.hex", "--output-path", "totem_right.uf2", "--family", "${UF2_FAMILY}"]
+dependencies = ["hex-right"]
+
+[tasks.uf2]
+dependencies = ["uf2-dongle", "uf2-left", "uf2-right"]

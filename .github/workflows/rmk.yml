@@ -1,0 +1,42 @@
+name: Build RMK firmware
+
+on:
+  push:
+    paths: ["rmk/**", ".github/workflows/rmk.yml"]
+  pull_request:
+    paths: ["rmk/**", ".github/workflows/rmk.yml"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: rmk
+    steps:
+      - uses: actions/checkout@v4
+
+      # p256-cortex-m4-sys (BLE crypto) compiles C code for the nRF52840
+      - name: Install ARM GCC
+        run: sudo apt-get update && sudo apt-get install -y gcc-arm-none-eabi libnewlib-arm-none-eabi
+
+      - name: Install Rust (stable + thumbv7em target)
+        run: rustup toolchain install # reads rmk/rust-toolchain.toml
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: rmk
+
+      - name: Install build tools
+        run: cargo install --locked flip-link cargo-make cargo-binutils cargo-hex-to-uf2
+
+      - name: Build UF2
+        run: cargo make uf2 --release
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: totem-rmk-firmware
+          path: |
+            rmk/totem_dongle.uf2
+            rmk/totem_left.uf2
+            rmk/totem_right.uf2
