@@ -1,0 +1,41 @@
+name: Build viewer
+
+on:
+  push:
+    paths: ["viewer/**", "rmk/keyboard.toml", ".github/workflows/viewer.yml"]
+  pull_request:
+    paths: ["viewer/**", "rmk/keyboard.toml", ".github/workflows/viewer.yml"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { os: ubuntu-24.04, name: linux, bin: totem-viewer }
+          - { os: windows-latest, name: windows, bin: totem-viewer.exe }
+          - { os: macos-latest, name: macos, bin: totem-viewer }
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: viewer
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: viewer
+
+      - name: Test
+        run: cargo test --locked
+
+      - name: Build
+        run: cargo build --release --locked
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: totem-viewer-${{ matrix.name }}
+          path: viewer/target/release/${{ matrix.bin }}

@@ -53,9 +53,13 @@ built with the `nrf52840-nosd` snippet (also for `settings_reset`), see the
 
 The firmware uses Rynk instead of Vial. Rynk is experimental in v0.9.0: there is no
 desktop app yet, and the browser demo (`rynk-wasm`) only connects over Bluetooth, not
-USB. Because the dongle talks to the computer over USB, you currently need a small
-native tool built on the `rynk` + `rynk-usb` crates to edit the keymap live.
-Until then, edit `keyboard.toml` and reflash.
+USB. Because the dongle talks to the computer over USB, this repo has its own native
+tool, [`viewer/`](../viewer), built on the `rynk` + `rynk-usb` crates. For now it
+shows the active layer live (read-only). To change keys, edit `keyboard.toml` and
+reflash.
+
+The physical key positions the viewer draws come from `[layout]` / `[layout.shapes]`
+in `keyboard.toml` and are baked into the **dongle** firmware.
 
 Locked operations (bootloader, settings reset, key tester) are unlocked by holding
 **Q + the top-right key** (`[host].unlock_keys`).

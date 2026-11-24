@@ -1,0 +1,22 @@
+[package]
+name = "totem-viewer"
+version = "0.1.0"
+edition = "2024"
+description = "Live layer view for the TOTEM keyboard (RMK firmware, Rynk over USB)"
+license = "MIT OR Apache-2.0"
+publish = false
+
+[dependencies]
+# Rynk host client + USB transport. Pinned: 0.3.0 speaks the protocol of
+# rmk 0.9.0 (same rmk-types 0.4.0 / rmk-config 0.8.0). Bump together with rmk.
+rynk = "=0.3.0"
+rynk-usb = "=0.3.0"
+eframe = "0.37"
+embassy-futures = "0.1"
+tokio = { version = "1.54", features = ["rt", "time", "sync"] }
+serde = { version = "1", features = ["derive"] }
+toml = "1.2"
+
+[profile.release]
+lto = "thin"
+strip = true
