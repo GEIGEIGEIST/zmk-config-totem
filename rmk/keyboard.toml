@@ -30,6 +30,8 @@ unlock_keys = [[0, 0], [0, 9]]
 rows = 5
 cols = 10
 # Order = order of keys in every [[keymap.layer]] (38 keys).
+# Hand: L/R = side used by `unilateral_tap`; `*` (bilateral) on the thumbs so
+# holding a layer thumb key never cancels a home-row mod held on the same side.
 # Same as the ZMK matrix transform: row 2 starts/ends with the outer pinky keys (3,0)/(3,9).
 #
 # Whitespace in `map` is ignored; the physical geometry (sent to hosts over
@@ -39,7 +41,7 @@ map = """
 [1.0]   (0,0,L,@pL) (0,1,L,@rL) (0,2,L) (0,3,L,@i) (0,4,L,@x)  [2.3]  (0,5,R,@x) (0,6,R,@i) (0,7,R) (0,8,R,@rR) (0,9,R,@pR)
 [1.0]   (1,0,L,@pL) (1,1,L,@rL) (1,2,L) (1,3,L,@i) (1,4,L,@x)  [2.3]  (1,5,R,@x) (1,6,R,@i) (1,7,R) (1,8,R,@rR) (1,9,R,@pR)
 (3,0,L,@oL) (2,0,L,@pL) (2,1,L,@rL) (2,2,L) (2,3,L,@i) (2,4,L,@x)  [2.3]  (2,5,R,@x) (2,6,R,@i) (2,7,R) (2,8,R,@rR) (2,9,R,@pR) (3,9,R,@oR)
-[3.8]   (3,2,L,@t1) (3,3,L,@t2L) (3,4,L,@t3L)  [0.78]  (3,5,R,@t3R) (3,6,R,@t2R) (3,7,R,@t1)
+[3.8]   (3,2,*,@t1) (3,3,*,@t2L) (3,4,*,@t3L)  [0.78]  (3,5,*,@t3R) (3,6,*,@t2R) (3,7,*,@t1)
 """
 
 # Column stagger / rotation, as offsets (key units) from the plain grid.
@@ -142,7 +144,20 @@ gap_timeout = "200ms"
 
 [behavior.morse.profiles]
 # Home-row mods (all &mt keys)
-HRM = { enable_flow_tap = true, normal_mode = true, hold_timeout = "200ms", gap_timeout = "200ms", quick_tap_timeout = "150ms" }
+#   permissive_hold: mod + other key pressed AND released while the mod is still
+#     held -> mod (no need to wait 200ms for Ctrl+C etc.)
+#   unilateral_tap: a roll with a key on the SAME hand -> always the letter, so
+#     mods only fire for keys on the other hand (urob-style "positional" HRM).
+#     For same-hand shortcuts hold the mod past hold_timeout, or use the other hand.
+#   enable_flow_tap + prior_idle_time (150ms, above): fast typing -> always letters.
+HRM = { enable_flow_tap = true, permissive_hold = true, unilateral_tap = true, hold_timeout = "200ms", gap_timeout = "200ms", quick_tap_timeout = "150ms" }
+# Layer thumbs (LT keys): the layer turns on as soon as another key is pressed
+# while the thumb is down (hold_on_other_press), no 200ms wait.
+THUMB = { hold_on_other_press = true, hold_timeout = "200ms", gap_timeout = "200ms" }
+# Space thumb: same, plus flow tap, so Space pressed while typing (within
+# prior_idle_time = 150ms of the previous key) is always a plain Space. Without
+# this, rolling "Space -> next letter" would hit the f_and_arr layer instead.
+THUMB_SPACE = { hold_on_other_press = true, enable_flow_tap = true, hold_timeout = "200ms", gap_timeout = "200ms" }
 
 # ZMK combos are position based; RMK combos match the key actions, so the
 # actions below are exactly what sits at those positions on the base layer.
@@ -153,9 +168,12 @@ combos = [
   # Q + W -> Esc
   { actions = ["Q", "W"], output = "Escape" },
   # R + S + T -> Enter
-  { actions = ["MT(R, RCtrl, HRM)", "MT(S, RAlt, HRM)", "MT(T, LGui, HRM)"], output = "Enter" },
+  { actions = ["MT(R, LAlt, HRM)", "MT(S, LShift, HRM)", "MT(T, LCtrl, HRM)"], output = "Enter" },
   # N + E + I -> Enter
-  { actions = ["MT(N, RGui, HRM)", "MT(E, LAlt, HRM)", "MT(I, LCtrl, HRM)"], output = "Enter" },
+  { actions = ["MT(N, RCtrl, HRM)", "MT(E, RShift, HRM)", "MT(I, LAlt, HRM)"], output = "Enter" },
+  # qwerty layer: S + D + F / J + K + L -> Enter (same positions as R+S+T / N+E+I)
+  { actions = ["MT(S, LAlt, HRM)", "MT(D, LShift, HRM)", "MT(F, LCtrl, HRM)"], output = "Enter" },
+  { actions = ["MT(J, RCtrl, HRM)", "MT(K, RShift, HRM)", "MT(L, LAlt, HRM)"], output = "Enter" },
   # both outer pinky keys -> Caps Lock (right one is now RShift so the two differ)
   { actions = ["LShift", "RShift"], output = "CapsLock" },
 ]
@@ -166,11 +184,14 @@ combos = [
 
 [[keymap.layer]]
 name = "c_base"
+# Home-row mods in GASC order (pinky -> index): Gui, Alt, Shift, Ctrl, mirrored
+# (same as the qwerty layer). Both home-row Alts are LAlt (real Alt).
+# AltGr (RAlt) moved to the bottom row, ring finger: hold X or Dot.
 keys = """
-         Q                  W                  F                  P                  G            J          L                  U                  Y                  Insert
-         MT(A, LShift, HRM) MT(R, RCtrl, HRM)  MT(S, RAlt, HRM)   MT(T, LGui, HRM)   D            H          MT(N, RGui, HRM)   MT(E, LAlt, HRM)   MT(I, LCtrl, HRM)  MT(O, RShift, HRM)
-  LShift Z                  X                  C                  V                  B            K          M                  Comma              Dot                Escape  RShift
-                                               LT(5, Delete)      Backspace          LT(1, Enter) LT(2, Tab) LT(4, Space)       MO(3)
+         Q                  W                  F                   P                  G            J          L                  U                   Y                  Insert
+         MT(A, LGui, HRM)   MT(R, LAlt, HRM)   MT(S, LShift, HRM)  MT(T, LCtrl, HRM)  D            H          MT(N, RCtrl, HRM)  MT(E, RShift, HRM)  MT(I, LAlt, HRM)   MT(O, RGui, HRM)
+  LShift Z                  MT(X, RAlt, HRM)   C                   V                  B            K          M                  Comma               MT(Dot, RAlt, HRM) Escape  RShift
+                                               LT(5, Delete, THUMB) Backspace        LT(1, Enter, THUMB) LT(2, Tab, THUMB) LT(4, Space, THUMB_SPACE) MO(3)
 """
 
 [[keymap.layer]]
@@ -185,10 +206,11 @@ keys = """
 
 [[keymap.layer]]
 name = "sym_rest"
+# '-' only on the right (between = and +), "'" only on the brackets layer.
 keys = """
      No              No     No              No                  No           No     No     No     No              No
-     SHIFTED(Slash)  Minus  SHIFTED(Minus)  SHIFTED(Backslash)  Backslash    Slash  Equal  Minus  SHIFTED(Equal)  Quote
-  No No              No     No              No                  No           No     No     No     No              TO(0) No
+     SHIFTED(Slash)  No     SHIFTED(Minus)  SHIFTED(Backslash)  Backslash    Slash  Equal  Minus  SHIFTED(Equal)  No
+  _  No              No     No              No                  No           No     No     No     No              TO(0) _
                             No              TO(2)               Delete       No     _      No
 """
 
@@ -197,16 +219,19 @@ name = "sym_top"
 keys = """
      No            No            No            No            No              No            No            No            No     No
      SHIFTED(Kc1)  SHIFTED(Kc2)  SHIFTED(Kc3)  SHIFTED(Kc4)  SHIFTED(Kc5)    SHIFTED(Kc6)  SHIFTED(Kc7)  SHIFTED(Kc8)  Grave  No
-  No No            No            No            No            No              No            No            No            No     TO(0) No
+  _  No            No            No            No            No              No            No            No            No     TO(0) _
                                  No            TO(3)         No              No            No            No
 """
 
 [[keymap.layer]]
 name = "f_and_arr"
+# No extra mods here: they come from the home-row mods, held BEFORE the Space thumb.
+#   Ctrl+Shift+Left = hold N + E (right hand), hold Space, tap Left
+#   Alt+F4          = hold R (left hand), hold Space, tap F4
 keys = """
      No  No    Up     No     No     F10  F7  F8  F9  No
      No  Left  Down   Right  No     F11  F4  F5  F6  No
-  No No  No    No     No     No     F12  F1  F2  F3  TO(0) No
+  _  No  No    No     No     No     F12  F1  F2  F3  TO(0) _
                No     TO(4)  No     No   No  No
 """
 
@@ -214,17 +239,21 @@ keys = """
 name = "numpad"
 keys = """
      No  No     No     No     No       No        Kp7    Kp8  Kp9  No
-     No  TO(5)  TO(6)  No     No       PageUp    Kp4    Kp5  Kp6  Kp0
-  No No  TO(1)  TO(2)  TO(4)  No       PageDown  Kp1    Kp2  Kp3  TO(0) No
+     No  TO(5)  TO(6)  No     No       PageUp    Kp4    Kp5  Kp6  No
+  _  No  TO(1)  TO(2)  TO(4)  No       PageDown  Kp1    Kp2  Kp3  TO(0) _
                 No     No     No       No        TO(5)  Kp0
 """
 
 [[keymap.layer]]
 name = "qwerty"
-# ZMK had "&mt INSERT RIGHT_GUI" (hold Insert, tap RGui) -> TH(RGui, Insert)
+# Home-row mods in GASC order (pinky -> index): Gui, Alt, Shift, Ctrl, mirrored.
+# Both Alts are LAlt (a real Alt, not AltGr); AltGr = hold X or Dot, as on c_base. The ; position keeps Insert as its
+# tap (the old ZMK "&mt INSERT RIGHT_GUI" tapped Insert too), now with RGui on hold.
+# Right outer pinky is RShift (was LShift) so the LShift+RShift Caps Lock combo works here too.
+# Thumbs are identical to c_base.
 keys = """
-         Q  W                 E                  R                 T       Y       U                 I                  O                 P
-         A  MT(S, LAlt, HRM)  MT(D, LCtrl, HRM)  MT(F, LGui, HRM)  G       H       MT(J, RGui, HRM)  MT(K, RCtrl, HRM)  MT(L, RAlt, HRM)  TH(RGui, Insert, HRM)
-  LShift Z  X                 C                  V                 B       N       M                 Comma              Dot               TO(0)  LShift
-                              LT(5, Enter)       Backspace         MO(1)   MO(2)   LT(4, Space)      LT(3, Tab)
+         Q                  W                  E                    R                  T       Y       U                  I                    O                  P
+         MT(A, LGui, HRM)   MT(S, LAlt, HRM)   MT(D, LShift, HRM)   MT(F, LCtrl, HRM)  G       H       MT(J, RCtrl, HRM)  MT(K, RShift, HRM)   MT(L, LAlt, HRM)   MT(Insert, RGui, HRM)
+  LShift Z                  MT(X, RAlt, HRM)   C                    V                  B       N       M                  Comma                MT(Dot, RAlt, HRM) TO(0)  RShift
+                              LT(5, Delete, THUMB) Backspace       LT(1, Enter, THUMB) LT(2, Tab, THUMB) LT(4, Space, THUMB_SPACE) MO(3)
 """
